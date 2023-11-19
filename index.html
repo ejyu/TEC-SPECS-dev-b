@@ -1,0 +1,254 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>TEC SPECS</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper-->
+			<div id="wrapper">
+
+				<!-- Nav -->
+					<!-- <nav id="nav">
+						<a href="#loginIDscan" class="icon solid fa-credit-card"><span>Student ID Card Login</span></a>
+						<a href="#loginPIDAD" class="icon solid fa-credit-card"><span>PID / AD Login</span></a>
+						<a href="#adminSignOn" class="icon solid fa-user-circle-o"><span>Admin Signed In</span></a>
+						<a href="#studentSignOn" class="icon brands fa-user-circle"><span>Student Signed In</span></a>
+					</nav> -->
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Login w/ ID Scan -->
+							<article id="loginIDscan" class="panel">
+								<header>
+									<h1>Welcome back</h1>
+									<p>Scan your ID card to get started.</p>
+								</header>
+								<form action="#" method="post">
+									<div>
+										<div class="row">
+											<div class="col-6 col-12-medium">
+												<input type="text" name="studentIdentificationString" placeholder="Waiting for a student ID to be scanned..." />
+											</div>
+										</div>
+									</div>
+								</form>
+								<p>Scanning your ID will automatically try to get a PC for you.</p>
+								<p>Already have a PC?<br />Scanning again will quickly sign you out.</p>
+								<p>Admins: <a class="link" href="#loginPIDAD">Sign In</a></p>
+								<!-- <a href="#loginPIDAD" class="jumplink pic">
+									<span class="arrow icon solid fa-chevron-right"><span>Jump button</span></span>
+									<img src="images/me.jpg" alt="" />
+								</a> -->
+								
+							</article>
+
+						<!-- Login w/ PID / AD -->
+							<article id="loginPIDAD" class="panel">
+								<header>
+									<a href="#loginIDscan">&lt; Back</a>
+									<h2>Administrator Login</h2>
+								</header>
+								<form action="#" method="post">
+									<div>
+										<div class="row">
+											<div class="col-6 col-12-medium">
+												<input type="text" name="username" placeholder="Admin Username" />
+											</div>
+											<div class="col-6 col-12-medium">
+												<input type="text" name="password" placeholder="Admin Password" />
+											</div>
+											<div class="col-12">
+												<input type="submit" value="Submit" />
+											</div>
+											<p>For Testing: <a href="#adminSignOn">Force Admin Sign In</a></p>
+										</div>
+									</div>
+								</form>
+							</article>
+
+						<!-- Admin Signed In -->
+							<article id="adminSignOn" class="panel">
+								<header>
+									<h2>Admin Signed In</h2>
+								</header>
+								<table id="table-studentView">
+									<tr>
+										<th id="cell-0-0"></th>
+										<th id="cell-0-1"></th>
+										<th id="cell-0-2"></th>
+										<th id="cell-0-3" pc="not-pc">GARAGE</th>
+										<th id="cell-0-4"></th>
+										<th id="cell-0-5"></th>
+										<th id="cell-0-6"></th>
+										<th id="cell-0-7"></th>
+									</tr>
+									<tr>
+									<th id="cell-1-0"></th>
+									<th id="cell-1-1"></th>
+									<th id="cell-1-2"></th>
+									<th id="cell-1-3"></th>
+									<th id="cell-1-4"></th>
+									<th id="cell-1-5"></th>
+									<th id="cell-1-6"></th>
+									<th id="cell-1-7"></th>
+									</tr>
+									<tr>
+										<th id="cell-2-0">D1</th>
+										<th id="cell-2-1">D2</th>
+										<th id="cell-2-2">D3</th>
+										<th id="cell-2-3">D4</th>
+										<th id="cell-2-4">D5</th>
+										<th id="cell-2-5">D6</th>
+										<th id="cell-2-6"></th>
+										<th id="cell-2-7">E1</th>
+									</tr>
+									<tr>
+										<th id="cell-3-0"></th>
+										<th id="cell-3-1"></th>
+										<th id="cell-3-2"></th>
+										<th id="cell-3-3"></th>
+										<th id="cell-3-4"></th>
+										<th id="cell-3-5"></th>
+										<th id="cell-3-6"></th>
+										<th id="cell-3-7"></th>
+									</tr>
+									<tr>
+										<th id="cell-4-0">C1</th>
+										<th id="cell-4-1">C2</th>
+										<th id="cell-4-2">C3</th>
+										<th id="cell-4-3">C4</th>
+										<th id="cell-4-4">C5</th>
+										<th id="cell-4-5">C6</th>
+										<th id="cell-4-6"></th>
+										<th id="cell-4-7">E2</th>
+									</tr>
+									<tr>
+										<th id="cell-5-0"></th>
+										<th id="cell-5-1"></th>
+										<th id="cell-5-2"></th>
+										<th id="cell-5-3"></th>
+										<th id="cell-5-4"></th>
+										<th id="cell-5-5"></th>
+										<th id="cell-5-6"></th>
+										<th id="cell-5-7"></th>
+									</tr>
+									<tr>
+										<th id="cell-6-0">B1</th>
+										<th id="cell-6-1">B2</th>
+										<th id="cell-6-2">B3</th>
+										<th id="cell-6-3">B4</th>
+										<th id="cell-6-4">B5</th>
+										<th id="cell-6-5"></th>
+										<th id="cell-6-6"></th>
+										<th id="cell-6-7">E3</th>
+									</tr>
+									<tr>
+										<th id="cell-7-0"></th>
+										<th id="cell-7-1"></th>
+										<th id="cell-7-2"></th>
+										<th id="cell-7-3"></th>
+										<th id="cell-7-4"></th>
+										<th id="cell-7-5"></th>
+										<th id="cell-7-6"></th>
+										<th id="cell-7-7"></th>
+									</tr>
+									<tr>
+										<th id="cell-8-0">A1</th>
+										<th id="cell-8-1">A2</th>
+										<th id="cell-8-2">A3</th>
+										<th id="cell-8-3">A4</th>
+										<th id="cell-8-4">A5</th>
+										<th id="cell-8-5"></th>
+										<th id="cell-8-6"></th>
+										<th id="cell-8-7">E4</th>
+									</tr>
+									<tr>
+										<th id="cell-9-0"></th>
+										<th id="cell-9-1"></th>
+										<th id="cell-9-2"></th>
+										<th id="cell-9-3"></th>
+										<th id="cell-9-4"></th>
+										<th id="cell-9-5"></th>
+										<th id="cell-9-6"></th>
+										<th id="cell-9-7"></th>
+									</tr>
+									<tr>
+										<th id="cell-10-0"></th>
+										<th id="cell-10-1"></th>
+										<th id="cell-10-2"></th>
+										<th id="cell-10-3"></th>
+										<th id="cell-10-4"></th>
+										<th id="cell-10-5"></th>
+										<th id="cell-10-6">CAFE</th>
+										<th id="cell-10-7"></th>
+									</tr>
+								</table>
+								<p>
+									PC status info here
+								</p>
+								<p>
+									Buttons + logout somewhere
+								</p>
+								<!-- <section>
+									<div class="row">
+										<div class="col-4 col-6-medium col-12-small">
+											<a href="#" class="image fit"><img src="images/pic01.jpg" alt=""></a>
+										</div>
+										<div class="col-4 col-6-medium col-12-small">
+											<a href="#" class="image fit"><img src="images/pic12.jpg" alt=""></a>
+										</div>
+									</div>
+								</section> -->
+							</article>
+
+						<!-- Student Signed In -->
+							<article id="studentSignOn" class="panel">
+								<header>
+									<h2>Student Signed In</h2>
+								</header>
+								<p>
+									Looking for a computer... Please wait...
+								</p>
+								<br />
+								<p><strong>PLACEHOLDER: </strong>Table for the <strong>student view</strong> goes here.</p>
+								<table id="table-adminView">
+									<!-- Note: Table goes here. -->
+								</table>
+								<br />
+								<p>
+									<strong>PLACEHOLDER: </strong>
+									Timer here to indicate how long this page will be up for before going back to sign in screen.
+								</p>
+							</article>
+
+					</div>
+
+				<!-- Footer -->
+					<div id="footer">
+						<ul class="copyright">
+							<li>
+								TEC Specs v0.1.0-canary
+							</li>
+							<!-- <li>
+								Design: <a href="#"></a>
+							</li> -->
+						</ul>
+					</div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
