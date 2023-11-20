@@ -24,20 +24,29 @@ function initPcs(){
     }
 }
 
+//status code 0 for free
+//status code 1 for assign
+//index 0 of return
 function scanId(id){
     for(let value of inUsePcQueue){
         if(value.id == id){
             console.log("PC " + value.num + " freed by " + id);
-            freePcById(id);
-            return;
+            return [0, freePcById(id)];
         }
     }
-    assignPc(id);
+    return [1, assignPc(id)];
 }
 
+//returns list of length 2, 2nd num is return code
+//return code 0 is free pc: pc num is in index 0
+//return code 1 is pc in use but user has played long enough: pc num is index 0
+//return code 2 is pcs reserved for id: index 0 is list of resercved pcs
+//return code 3 is no pcs available
+//return code 4 is no pcs available, est time remaining in index 0
 function assignPc(id){
-    if(checkReservations(id)){
-        return;
+    let ret = checkReservations(id);
+    if(ret){
+        return [ret, 2];
     }
 
     for(let value of openPcQueue){
@@ -46,7 +55,7 @@ function assignPc(id){
         value.id = id;
         inUsePcQueue.add(value);
         console.log("FREE PC: " + value.num)
-        return true;
+        return [value.num, 0];
     }
     let time = Date.now();
     let use_time = 0;
@@ -59,7 +68,7 @@ function assignPc(id){
             value.time = Date.now();
             value.id = 0;
             inUsePcQueue.add(value);
-            return true;
+            return [value.num, 1];
         }
         break;
     }
@@ -75,11 +84,12 @@ function assignPc(id){
     }
     if(time_remaining == 0){
         console.log("No PCs availalble!");
+        return [0, 3];
     }
     else{
         console.log("No PCs available, next opening in: " + time_remaining + " seconds");
+        return [time_remaining, 4];
     }
-    return false;
 }
 
 function freePcById(id){
@@ -89,6 +99,7 @@ function freePcById(id){
             value.time = Date.now();
             value.id = 0;
             openPcQueue.add(value);
+            return value.num;
         }
     }
 }
@@ -99,7 +110,7 @@ function freePc(pcNum){
             inUsePcQueue.delete(value);
             value.time = Date.now();
             openPcQueue.add(value);
-            break;
+            return value.num;
         }
     }
 }
@@ -174,7 +185,7 @@ function checkReservations(id){
 
     if(pc_reserve.length > 0){
         console.log("PCs reserved for " + esportsMap.get(id) + ": " + pc_reserve);
-        return true;
+        return pc_reserve;
     }
     return false;
 }
